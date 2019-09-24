@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+
+    <title>
+                  fullscreen & scroll-bar
+    </title>
+</head>
+<body>
+    <div id="fullscreen_btn" onclick="openFullscreen();"><img src="img/fullscreen_btn.png"></div>
+    
+    <div id='view'>
+        <img src="img/main.png">
+        <img src="img/main.png">
+        <img src="img/main.png">
+        <img src="img/main.png">
+        <img src="img/main.png">
+        <img src="img/main.png">
+        <img src="img/main.png">
+
+    </div>
+
+
+    
+    <script>
+        var elem = document.getElementById("view");
+        function openFullscreen() {
+          if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+          } else if (elem.mozRequestFullScreen) { /* Firefox */
+            elem.mozRequestFullScreen();
+          } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+            elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) { /* IE/Edge */
+            elem.msRequestFullscreen();
+          }
+        }
+        /*
+          function doDisplay(){
+            var con = document.getElementById("fullscreen_btn");
+            if(con.style.display=='none'){
+                con.style.display = 'block';
+            }else{
+                con.style.display = 'none';
+           }
+          }
+        */
+        </script> 
+</body>
+</html>
